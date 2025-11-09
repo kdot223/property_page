@@ -1,5 +1,5 @@
 export async function fetchProperty(id = 1) {
-  // ถ้าอยู่บนเซิร์ฟเวอร์ (เช่น Vercel) จะไม่เรียก backend จริง
+  // ถ้ารันอยู่บนเซิร์ฟเวอร์ (เช่นตอน build หรือใน Vercel)
   if (typeof window === "undefined") {
     console.log("🌐 Server build detected — using mock data only");
     return {
@@ -28,7 +28,7 @@ export async function fetchProperty(id = 1) {
     };
   }
 
-  // ถ้าเป็นตอนรันในเครื่อง (dev mode) → ลองเรียก backend
+  
   try {
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:4000";
     const res = await fetch(`${backendUrl}/api/property/${id}`);
