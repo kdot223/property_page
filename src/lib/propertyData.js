@@ -1,5 +1,5 @@
 export async function fetchProperty(id = 1) {
-  // ถ้ารันอยู่บนเซิร์ฟเวอร์ (เช่นตอน build หรือใน Vercel)
+  // ถ้ารันบนเซิร์ฟเวอร์ (ตอน build หรือใน Vercel)
   if (typeof window === "undefined") {
     console.log("🌐 Server build detected — using mock data only");
     return {
@@ -17,18 +17,25 @@ export async function fetchProperty(id = 1) {
         en: "An exclusive luxury development offering modern design and premium finishes. Spacious living areas, panoramic windows, and private gardens.",
         th: "โครงการบ้านเดี่ยวสุดหรู ออกแบบทันสมัย วัสดุพรีเมียม พื้นที่ใช้สอยกว้างขวาง และสวนส่วนตัว"
       },
-      images: ["/assets/house.jpg"],
+      // ✅ เพิ่มหลายรูปภาพ (จะเลื่อนได้แน่นอน)
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1600",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600",
+        "https://images.unsplash.com/photo-1599423300746-b62533397364?w=1600"
+      ],
       agent: {
         name: "Monkey",
         phone: "+66-80-123-4567",
         email: "agent@example.com",
-        avatar: "/assets/agent.jpg"
+        avatar: "https://randomuser.me/api/portraits/men/32.jpg"
       },
-      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.0"
+      mapEmbed:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.732474567527!2d100.5147!3d13.7527"
     };
   }
 
-  
+  // ถ้า fetch backend ไม่ได้ ให้ fallback มาที่ mock data ข้างบน
   try {
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:4001";
     const res = await fetch(`${backendUrl}/api/property/${id}`);
@@ -51,14 +58,19 @@ export async function fetchProperty(id = 1) {
         en: "An exclusive luxury development offering modern design and premium finishes. Spacious living areas, panoramic windows, and private gardens.",
         th: "โครงการบ้านเดี่ยวสุดหรู ออกแบบทันสมัย วัสดุพรีเมียม พื้นที่ใช้สอยกว้างขวาง และสวนส่วนตัว"
       },
-      images: ["/assets/house.jpg"],
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1600",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600"
+      ],
       agent: {
         name: "Monkey",
         phone: "+66-80-123-4567",
         email: "agent@example.com",
-        avatar: "/assets/agent.jpg"
+        avatar: "https://randomuser.me/api/portraits/men/32.jpg"
       },
-      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.0"
+      mapEmbed:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.732474567527!2d100.5147!3d13.7527"
     };
   }
 }
