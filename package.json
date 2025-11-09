@@ -7,7 +7,9 @@
     "dev:server": "cross-env PORT=4001 node api/server.js",
     "dev:next": "next dev -p 3001",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "git add . && git commit -m \"auto deploy\" && git push origin main"
+
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
