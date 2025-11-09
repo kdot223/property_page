@@ -22,5 +22,6 @@ const data = {
 
 app.get('/api/property/:id', (req,res)=>{ res.json(data); });
 
-const port = 4000;
-app.listen(port, ()=>console.log(`✅ Backend running on port ${port}`));
+const PORT = process.env.PORT || 4001;
+app.listen(PORT, () => console.log(`✅ Backend running on port ${PORT}`));
+

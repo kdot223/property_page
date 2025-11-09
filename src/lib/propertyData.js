@@ -30,7 +30,7 @@ export async function fetchProperty(id = 1) {
 
   
   try {
-    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:4000";
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:4001";
     const res = await fetch(`${backendUrl}/api/property/${id}`);
     if (!res.ok) throw new Error("Backend not responding");
     return await res.json();

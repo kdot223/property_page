@@ -1,0 +1,173 @@
+.container {
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+  background: #f7f7f7;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+}
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+.heroText {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  color: white;
+  max-width: 600px;
+}
+.heroText h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.price {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.contactBtn {
+  display: inline-block;
+  background: #000;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.contactBtn:hover {
+  background: #333;
+}
+
+/* DETAILS */
+.details {
+  max-width: 900px;
+  margin: 80px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.desc {
+  color: #555;
+  line-height: 1.8;
+}
+
+/* GALLERY */
+.gallery {
+  max-width: 1000px;
+  margin: 60px auto;
+  text-align: center;
+}
+.gallery h2 {
+  margin-bottom: 20px;
+}
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px;
+}
+.slider img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.slider img:hover {
+  transform: scale(1.05);
+}
+
+/* AGENT */
+.agent {
+  background: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+.agent h2 {
+  margin-bottom: 20px;
+}
+.agentCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #fafafa;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  margin: 0 auto;
+}
+.agentCard img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.agentBtn {
+  display: inline-block;
+  margin-top: 10px;
+  background: black;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.agentBtn:hover {
+  background: #333;
+}
+
+/* MAP */
+.map {
+  max-width: 1000px;
+  margin: 60px auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.map h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* app/Info.module.css */
+.container {
+  padding: 2rem;
+  background-color: #fff;
+  color: #222;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
